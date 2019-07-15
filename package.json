@@ -1,0 +1,26 @@
+{
+  "name": "coins-packer",
+  "version": "1.0.0",
+  "description": "''",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vdkrasny/coins-packer.git"
+  },
+  "author": "vdkrasny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vdkrasny/coins-packer/issues"
+  },
+  "homepage": "https://github.com/vdkrasny/coins-packer#readme",
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.0",
+    "jest": "^24.8.0"
+  }
+}
