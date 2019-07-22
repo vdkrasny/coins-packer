@@ -7,8 +7,9 @@ A function that takes a list of coins as an argument and using it returns an obj
 
 ```bash
 npm install
-npm run test
 npm run start
+npm run test
+npm run test:watch
 ```
 
 ## Usage
