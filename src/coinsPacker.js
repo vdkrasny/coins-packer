@@ -1,9 +1,9 @@
-const { isObject } = require('../utils');
+const { isTrueObject } = require('../utils');
 const { rollsEU } = require('../constants');
 
 function coinsPacker(coins = [], rolls = rollsEU) {
     if (!Array.isArray(coins)) throw new Error(`TypeError: ${JSON.stringify(coins)} is not an array`);
-    if (!isObject(rolls)) throw new Error(`TypeError: ${JSON.stringify(rolls)} is not an object`);
+    if (!isTrueObject(rolls)) throw new Error(`TypeError: ${JSON.stringify(rolls)} is not an object`);
 
     const coinsCounter = {};
     const outputResult = {};

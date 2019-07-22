@@ -28,9 +28,12 @@ describe('coinsPacker()', () => {
 
     it('Should throw an error if the rolls param is not an true object', () => {
         const coins = [1, 1, 2, 2];
-        const rolls = [];
+        const rolls1 = [];
+        const rolls2 = () => {};
 
-        expect(() => coinsPacker(coins, rolls))
+        expect(() => coinsPacker(coins, rolls1))
+            .toThrow();
+        expect(() => coinsPacker(coins, rolls2))
             .toThrow();
     });
 

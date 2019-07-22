@@ -1,1 +1,1 @@
-module.exports.isObject = require('./isObject');
+module.exports.isTrueObject = require('./isTrueObject');
