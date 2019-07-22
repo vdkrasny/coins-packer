@@ -36,7 +36,7 @@ describe('coinsPacker()', () => {
 
     it('Should throw an error if a some key of the rolls param is not a number', () => {
         const coins = [1, 1, 2, 2];
-        const rolls = { 'whatever': 100 };
+        const rolls = { whatever: 100 };
 
         expect(() => coinsPacker(coins, rolls))
             .toThrow();
@@ -58,7 +58,7 @@ describe('coinsPacker()', () => {
                 2: { rolls: 0, rest: 2 },
                 5: { rolls: 0, rest: 2 },
                 10: { rolls: 0, rest: 1 },
-                50: { rolls: 0, rest: 1 }
+                50: { rolls: 0, rest: 1 },
             };
 
             expect(coinsPacker(inputData, rollsCustom))
@@ -69,12 +69,12 @@ describe('coinsPacker()', () => {
             const inputData = [
                 ...Array.from({ length: 101 }, () => 1),
                 ...Array.from({ length: 200 }, () => 2),
-                20
+                20,
             ];
             const expectedResult = {
                 1: { rolls: 2, rest: 21 },
                 2: { rolls: 5, rest: 0 },
-                20: { rolls: 0, rest: 1 }
+                20: { rolls: 0, rest: 1 },
             };
 
             expect(coinsPacker(inputData, rollsCustom))
@@ -89,7 +89,7 @@ describe('coinsPacker()', () => {
                 5: { rolls: 55, rest: 13 },
                 10: { rolls: 33, rest: 40 },
                 20: { rolls: 85, rest: 11 },
-                50: { rolls: 42, rest: 12 }
+                50: { rolls: 42, rest: 12 },
             };
 
             expect(coinsPacker(inputData, rollsCustom))

@@ -26,8 +26,8 @@ function coinsPacker(coins = [], rolls = rollsEU) {
 
         if (coinsNumber) {
             outputResult[rollDenomination] = {
-                'rolls': Math.floor(coinsNumber / rollCount),
-                'rest': coinsNumber % rollCount
+                rolls: Math.floor(coinsNumber / rollCount),
+                rest: coinsNumber % rollCount,
             };
         }
     });
