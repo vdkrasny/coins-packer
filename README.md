@@ -1,4 +1,4 @@
-# coinsPacker
+# coinsPacker 
 A function that takes a list of coins as an argument and using it returns an object with information about the number of rolls and number of coins that have not been rolled up, for every denomination.
 
 [See the full task](https://gist.github.com/mdybciak/a731577d1091d657ff81f377b553797a)
@@ -7,9 +7,8 @@ A function that takes a list of coins as an argument and using it returns an obj
 
 ```bash
 npm install
-npm run start
 npm run test
-npm run test:watch
+npm run start
 ```
 
 ## Usage
@@ -18,7 +17,7 @@ npm run test:watch
 const coinsPacker = require('./src/coinsPacker');
 
 /**
- * Rreturns an object with information about the number of rolls
+ * Rreturns an object with information about the number of rolls 
  * and number of coins that have not been rolled up, for every denomination.
  *
  * @param {array} coins
@@ -32,7 +31,7 @@ const coinsPacker = require('./src/coinsPacker');
  */
 
 const result = coinsPacker(
-  [1, 2, 5, 50],
+  [1, 2, 5, 50], 
   {
     1: 10,
     2: 10,
