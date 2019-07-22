@@ -1,4 +1,4 @@
-const { isNumber, isObject } = require('../utils');
+const { isObject } = require('../utils');
 const { rollsEU } = require('../constants');
 
 function coinsPacker(coins = [], rolls = rollsEU) {
@@ -9,18 +9,25 @@ function coinsPacker(coins = [], rolls = rollsEU) {
     const outputResult = {};
 
     coins.forEach((coin) => {
-        if (!isNumber(coin)) throw new Error(`TypeError: ${coin} of the ${JSON.stringify(coins)} is not a number`);
+        if (!Number.isInteger(Number.parseFloat(coin))) {
+            throw new Error(`TypeError: ${coin} of the ${JSON.stringify(coins)} is not a integer number`);
+        }
+
         coinsCounter[coin] = coinsCounter[coin] ? coinsCounter[coin] + 1 : 1;
     });
 
     const rollsDenomination = Object.keys(rolls);
 
     rollsDenomination.forEach((rollDenomination) => {
-        if (!isNumber(rollDenomination)) throw new Error(`TypeError: ${rollDenomination} of the ${JSON.stringify(rolls)} is not a number`);
+        if (!Number.isInteger(Number.parseFloat(rollDenomination))) {
+            throw new Error(`TypeError: ${rollDenomination} of the ${JSON.stringify(rolls)} is not a integer number`);
+        }
 
-        const rollCount = rolls[rollDenomination];
+        const rollCount = Number.parseFloat(rolls[rollDenomination]);
 
-        if (!isNumber(rollCount)) throw new Error(`TypeError: ${rollCount} of the ${JSON.stringify(rolls)} is not a number`);
+        if (!Number.isInteger(rollCount)) {
+            throw new Error(`TypeError: ${rollCount} of the ${JSON.stringify(rolls)} is not a integer number`);
+        }
 
         const coinsNumber = coinsCounter[rollDenomination];
 

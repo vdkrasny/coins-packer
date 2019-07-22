@@ -34,19 +34,28 @@ describe('coinsPacker()', () => {
             .toThrow();
     });
 
-    it('Should throw an error if a some key of the rolls param is not a number', () => {
+    it('Should throw an error if a some key of the rolls param is not a integer number', () => {
         const coins = [1, 1, 2, 2];
-        const rolls = { whatever: 100 };
+        const rolls1 = { whatever: 100 };
+        const rolls2 = { 1.2: 100 };
 
-        expect(() => coinsPacker(coins, rolls))
+        expect(() => coinsPacker(coins, rolls1))
+            .toThrow();
+        expect(() => coinsPacker(coins, rolls2))
             .toThrow();
     });
 
-    it('Should throw an error if a some value of the rolls param is not a number', () => {
+    it('Should throw an error if a some value of the rolls param is not a integer number', () => {
         const coins = [1, 1, 2, 2];
-        const rolls = { 50: Infinity };
+        const rolls1 = { 50: 1.2 };
+        const rolls2 = { 50: NaN };
+        const rolls3 = { 50: Infinity };
 
-        expect(() => coinsPacker(coins, rolls))
+        expect(() => coinsPacker(coins, rolls1))
+            .toThrow();
+        expect(() => coinsPacker(coins, rolls2))
+            .toThrow();
+        expect(() => coinsPacker(coins, rolls3))
             .toThrow();
     });
 
