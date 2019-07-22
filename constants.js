@@ -6,7 +6,7 @@ const rollsEU = {
     20: 40,
     50: 40,
     100: 25,
-    200: 25
+    200: 25,
 };
 
 const rollsUSA = {
@@ -15,7 +15,7 @@ const rollsUSA = {
     10: 50,
     25: 40,
     50: 20,
-    100: 25
+    100: 25,
 };
 
 const rollsCustom = {
@@ -24,11 +24,11 @@ const rollsCustom = {
     5: 30,
     10: 50,
     20: 20,
-    50: 40
+    50: 40,
 };
 
 module.exports = {
     rollsEU,
     rollsUSA,
-    rollsCustom
+    rollsCustom,
 };
